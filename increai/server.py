@@ -6,8 +6,11 @@ STATIC_FOLDER = os.path.join(os.path.dirname(__file__), 'ui', 'build')
 app = Flask(__name__, static_folder=STATIC_FOLDER)
 
 
-@app.route('/')
-def serve():
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def catch_all(path):
+# @app.route('/')
+# def serve():
     return send_from_directory(app.static_folder, 'index.html')
 
 

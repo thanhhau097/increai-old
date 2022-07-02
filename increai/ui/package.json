@@ -2,7 +2,15 @@
   "name": "ui",
   "version": "0.1.0",
   "private": true,
+  "homepage":".",
   "dependencies": {
+    "@mantine/core": "^4.2.11",
+    "@mantine/dropzone": "^4.2.11",
+    "@mantine/hooks": "^4.2.11",
+    "@mantine/modals": "^4.2.11",
+    "@mantine/next": "^4.2.11",
+    "@mantine/prism": "^4.2.11",
+    "@mantine/rte": "^4.2.11",
     "@recogito/annotorious": "^2.7.6",
     "@recogito/annotorious-toolbar": "^1.1.0",
     "@testing-library/jest-dom": "^5.16.4",
@@ -10,7 +18,9 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.1",
+    "tabler-icons-react": "^1.52.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
