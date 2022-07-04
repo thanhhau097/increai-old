@@ -8,10 +8,11 @@ app = Flask(__name__, static_folder=STATIC_FOLDER)
 
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
-def catch_all(path):
-# @app.route('/')
-# def serve():
-    return send_from_directory(app.static_folder, 'index.html')
+def serve(path):
+    if path != "" and os.path.exists(app.static_folder + '/' + path):
+        return send_from_directory(app.static_folder, path)
+    else:
+        return send_from_directory(app.static_folder, 'index.html')
 
 
 def main():
